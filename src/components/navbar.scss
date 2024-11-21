@@ -1,0 +1,40 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    color: black;
+    font-weight: 500;
+    gap: 2rem;
+    @media screen and (width <= 768px) {
+       text-transform: uppercase;
+    }
+    & > *:first-child {
+        margin-right: auto;
+    }
+   & a {
+        text-decoration: none;
+        color: black;
+         &.active, &:hover{
+         text-decoration: underline;
+        }
+   }
+ }
+    
+
+
+/* Media query per schermi più piccoli */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 1rem;
+        gap: 0.5rem; /* Riduci il gap tra gli elementi */
+    }
+
+    .navbar__logo img {
+        width: 70px; /* Riduci la dimensione del logo per adattarlo */
+    }
+}
+
+
+
+
+

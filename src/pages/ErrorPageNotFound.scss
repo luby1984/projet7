@@ -1,0 +1,29 @@
+@use "../scss/variables.scss" as *;
+.error__page{
+    color: $color-primary;
+    text-align: center;
+    h1{
+        font-size: 10rem;
+        margin-bottom: 0.5em;
+    }
+    h2 {
+        font-size: 36px;
+        font-weight: 500;
+    }
+    a{
+       color: black;
+       
+    }
+    @media screen and (width <= 768px) { 
+        .error__page{
+            text-align: center;
+            h1 {
+                font-size: 6rem; 
+                max-width: 90%; 
+                margin: 0 auto; 
+                line-height: 1.2; 
+                
+            }
+        }
+    }
+}
