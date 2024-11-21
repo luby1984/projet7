@@ -1,0 +1,33 @@
+@use "../scss/variables.scss" as *;
+
+
+.apartment__description{
+    margin-bottom: 1rem;
+    flex-basis: 50%;
+    p{
+        margin-block: 0em;
+    }
+  .description__header{
+    background-color: $color-primary;
+    color: white;
+    padding: 0.2em 1em;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i{
+        font-size: 2rem;
+        cursor: pointer;
+    }
+  } 
+  .description__content{
+    background-color: #F6F6F673;
+    color: black;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    position: relative;
+    top: -0.3rem;
+    z-index: -1;
+    
+  }
+}
