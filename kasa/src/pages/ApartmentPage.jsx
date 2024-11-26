@@ -10,8 +10,7 @@ import  { useEffect } from "react";
 function ApartmentPage() {
     const location = useLocation();
     const { apartmentId } = location.state || {};
-    console.log("Apartment ID from state", apartmentId);
-    console.log("Location state:", location.state?.apartmentId);
+  
     const [selectedFlat, setSelectedFlat] = useState(null);
     useEffect(fetchApartmentData, []);
 
@@ -28,12 +27,14 @@ function ApartmentPage() {
 if (selectedFlat == null) return <div>...Loading</div>;
   return (
     <div className="apartment-page">
-      <ApartmentBanner imageUrl={selectedFlat.cover} />
+      <ApartmentBanner pictures={selectedFlat.pictures} />
       <ApartmentHeader  selectedFlat={selectedFlat} />
       
       <div className="apartment__description__area">
      <ApartmentDescription title="Description" content={selectedFlat.description} />
-     <ApartmentDescription title="Equipements" content={selectedFlat.equipments} />
+     <ApartmentDescription title="Equipements" content={selectedFlat.equipments.map((eq, i) => (
+     <li key={i}>{eq}</li>
+     ))} />
      </div>
     </div>
   );

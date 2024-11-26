@@ -14,7 +14,7 @@
         max-width: 20rem;
     }
 }
-@media screen and (width <= 768px){
+@media screen and (max-width: 768px){
     .grid{
         justify-content: center;
         background-color: $grid-background-light;

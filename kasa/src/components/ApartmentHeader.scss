@@ -4,7 +4,7 @@
         display: flex;
         margin-bottom: 2rem;
         gap: 1rem;
-        @media  screen and (width <= 768px) {
+        @media  screen and (max-width: 768px) {
             flex-direction: column;
             
         }
@@ -14,7 +14,7 @@
         .apartment__owner{
             display: flex;
             flex-direction: column;
-            @media screen and (width <= 768px){
+            @media screen and (max-width: 768px){
                 flex-direction: row;
                 justify-content: space-between;
                 
@@ -23,7 +23,7 @@
         .apartment__owner__details{
             display: flex;
             gap: 0.5rem;
-            @media screen and (width <= 768px ) {
+            @media screen and (max-width: 768px) {
                 order: 1;
             }
         }
@@ -68,11 +68,12 @@
             span {
                 background-color: $color-primary;  
                 color: white;
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: 700;
                 padding: 0.3em 0.5em;
                 border-radius: 0.7rem;
                 text-align: center;
+               
             }
     
         }

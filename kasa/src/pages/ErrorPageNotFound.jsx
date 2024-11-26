@@ -11,7 +11,7 @@ export function ErrorPageNotFound() {
   <>
   <Navbar />
   <Main>
-    <div className='error__page'>
+  <div className='error__page'>
   <h1>404</h1>
   <h2>Oops! La page que vous demandez n'existe pas </h2>
   <Link to="/">Retourner su la page d'accueil</Link>

@@ -1,13 +1,18 @@
 @use "../scss/variables.scss" as *;
 
 
-.apartment__description{
-    margin-bottom: 1rem;
-    flex-basis: 50%;
-    p{
-        margin-block: 0em;
-    }
-  .description__header{
+@use "../scss/variables.scss" as *;
+
+.apartment__description {
+  margin-bottom: 1rem;
+  flex-basis: 50%;
+  overflow: hidden;
+
+  p {
+    margin-block: 0;
+  }
+
+  .description__header {
     background-color: $color-primary;
     color: white;
     padding: 0.2em 1em;
@@ -15,19 +20,54 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    i{
-        font-size: 2rem;
-        cursor: pointer;
+    .description__header i {
+        position: relative;
+        z-index: 1; /* Imposta un valore maggiore per fare in modo che la freccia sia sopra */
+      }
+
+    i {
+      font-size: 2rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
     }
-  } 
-  .description__content{
-    background-color: #F6F6F673;
+
+    // Rotazione della freccia quando viene cliccata
+    .fa-chevron-up.clicked {
+      transform: rotate(180deg); // Ruota l'icona
+    }
+  }
+
+  .description__content {
+    background-color: #f6f6f673;
     color: black;
     padding: 1rem;
     border-radius: 0.5rem;
     position: relative;
     top: -0.3rem;
     z-index: -1;
-    
+    animation: slide-in 0.5s ease-in-out;
+    overflow: visible;
+
+    &.hidden {
+      animation: slide-out 0.5s ease-in-out;
+    }
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-out {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100%);
+    }
   }
 }
