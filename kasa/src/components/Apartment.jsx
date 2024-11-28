@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Apartment({ id, imageUrl, title }) {
   const state = { apartmentId: id };
-  console.log("Navigating with state:", state);
+   console.log("Navigating with state:", state);
 
   return (
     <Link to="/flat" state={state}>

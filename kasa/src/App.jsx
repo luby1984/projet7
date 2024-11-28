@@ -7,7 +7,7 @@ import Main from './layout/Main.jsx';
 
 function App() {
     return (
-      <div>
+      <div className='app'>
         <Navbar />
         <Main>
         <Outlet />{/* Qui verranno caricati i componenti specifici delle pagine */}

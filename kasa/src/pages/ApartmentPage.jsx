@@ -10,7 +10,7 @@ import  { useEffect } from "react";
 function ApartmentPage() {
     const location = useLocation();
     const { apartmentId } = location.state || {};
-  
+  ;
     const [selectedFlat, setSelectedFlat] = useState(null);
     useEffect(fetchApartmentData, []);
 

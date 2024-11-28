@@ -20,6 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: 700;
     .description__header i {
         position: relative;
         z-index: 1; /* Imposta un valore maggiore per fare in modo che la freccia sia sopra */
