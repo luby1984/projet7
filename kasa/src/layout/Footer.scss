@@ -6,7 +6,7 @@
     min-height: 100px;
     display: grid;
     place-items: center;
-    margin-top: auto;
+    margin-top: 2rem;
     font-size: 24px;
     width: 100%;
     box-sizing: border-box;
@@ -17,6 +17,11 @@
     width: 70%;
     height: auto;
 }
+.footer__text{
+    margin-bottom: 5rem;
+    font-size: 14px;
+}
+
 @media (max-width: 768px) {
     .footer {
         padding: 10px;

@@ -54,8 +54,13 @@
 
     h1 {
         font-weight: 500;
-        font-size: 36px;
+        font-size: 30px;
         margin-block: 0;
+    }
+    @media screen and (max-width: 768px){
+        h1{
+            font-size: 20px;
+        }
     }
 
     h2 {
@@ -74,10 +79,10 @@
         span {
             background-color: $color-primary;
             color: white;
-            font-size: 16px;
-            font-weight: 700;
-            padding: 0.3em 0.5em;
-            border-radius: 0.7rem;
+            font-size: 14px;
+            font-weight:600;
+            padding: 0.2em 0.4em;
+            border-radius: 0.5rem;
             text-align: center;
         }
 
@@ -88,7 +93,7 @@
             justify-content: flex-start; /* Puoi anche usare 'space-between' per distribuire lo spazio tra gli span */
             
             span {
-                font-size: 14px;  /* Puoi ridurre la dimensione del font su dispositivi più piccoli */
+                font-size: 12px;  /* Puoi ridurre la dimensione del font su dispositivi più piccoli */
                 padding: 0.2em 0.4em;  /* Riduci il padding per una migliore visualizzazione */
             }
         }

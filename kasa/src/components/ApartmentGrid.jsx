@@ -16,7 +16,7 @@ function ApartmentGrid() {
  
 
   function fetchApartments(){
-  fetch("logements.json")
+  fetch("/logements.json")
   .then((res) => res.json())
   .then((res) => setApartments(res))
   .catch(console.error);
