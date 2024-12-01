@@ -48,7 +48,7 @@ function ApartmentPage() {
 
   // Se il caricamento è ancora in corso
   if (isLoading) {
-    return <div className="loading">Caricamento in corso...</div>;
+    return <div className="loading">Loading...</div>;
   }
 
   // Se i dati non sono ancora pronti
