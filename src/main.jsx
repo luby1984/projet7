@@ -1,4 +1,4 @@
-import { StrictMode } from 'react';
+cimport { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
 import Banner from './layout/Banner.jsx';
@@ -12,7 +12,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement:<ErrorPageNotFound />,
     children: [
       {
         path: "/",
@@ -25,19 +24,21 @@ const router = createBrowserRouter([
       },
       {
         path: "about",
-        element: <About />, // Percorso per A propos
+        element: <About />, // Percorso per la pagina À propos
       },
       {
-        path: "flat",
-        element: <ApartmentPage />, // Percorso per Nos appartements
+        path: "flat/:id",
+        element: <ApartmentPage />, // Percorso per gli appartamenti
       },
+     
       {
-        path: "error", // Percorso della pagina di errore
+        path: "*", // Rotta di fallback per qualsiasi altro percorso
         element: <ErrorPageNotFound />,
       },
     ],
   },
 ]);
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

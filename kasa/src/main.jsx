@@ -31,6 +31,12 @@ const router = createBrowserRouter([
         path: "flat/:id",
         element: <ApartmentPage />, // Percorso per Nos appartements
       },
+     
+      {
+        path: "*",
+        element: <ErrorPageNotFound />,
+      }
+      
     ],
   },
 ]);

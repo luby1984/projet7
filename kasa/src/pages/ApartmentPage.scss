@@ -10,7 +10,9 @@
        @media screen and (max-width: 768px) {
         flex-direction: column;
        }
-    
+       .equipments{
+        padding-bottom: 0.2rem;
+       }
        li {
         list-style-type: none; 
         margin: 0.5rem 0;
